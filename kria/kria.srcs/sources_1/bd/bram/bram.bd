@@ -13,7 +13,8 @@
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
       "proc_sys_reset_0": "",
-      "accel_top_0": ""
+      "accel_top_0": "",
+      "aes_accel_0": ""
     },
     "ports": {
       "fan_ctrl_0": {
@@ -24,7 +25,7 @@
       "zynq_ultra_ps_e_0": {
         "vlnv": "xilinx.com:ip:zynq_ultra_ps_e:3.5",
         "xci_name": "bram_zynq_ultra_ps_e_0_0",
-        "xci_path": "ip/bram_zynq_ultra_ps_e_0_0/bram_zynq_ultra_ps_e_0_0.xci",
+        "xci_path": "ip\\bram_zynq_ultra_ps_e_0_0\\bram_zynq_ultra_ps_e_0_0.xci",
         "inst_hier_path": "zynq_ultra_ps_e_0",
         "parameters": {
           "PSU_BANK_0_IO_STANDARD": {
@@ -1465,13 +1466,13 @@
       "proc_sys_reset_0": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "bram_proc_sys_reset_0_0",
-        "xci_path": "ip/bram_proc_sys_reset_0_0/bram_proc_sys_reset_0_0.xci",
+        "xci_path": "ip\\bram_proc_sys_reset_0_0\\bram_proc_sys_reset_0_0.xci",
         "inst_hier_path": "proc_sys_reset_0"
       },
       "accel_top_0": {
         "vlnv": "xilinx.com:module_ref:accel_top:1.0",
         "xci_name": "bram_accel_top_0_1",
-        "xci_path": "ip/bram_accel_top_0_1/bram_accel_top_0_1.xci",
+        "xci_path": "ip\\bram_accel_top_0_1\\bram_accel_top_0_1.xci",
         "inst_hier_path": "accel_top_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -1799,6 +1800,132 @@
               },
               "RREADY": {
                 "physical_name": "s_rready",
+                "direction": "I"
+              }
+            }
+          },
+          "fromaccel": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "299997009",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "bram_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "fromaccel_tdata",
+                "direction": "I",
+                "left": "127",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "fromaccel_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "fromaccel_tready",
+                "direction": "O"
+              }
+            }
+          },
+          "toaccel": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "299997009",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "bram_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "toaccel_tdata",
+                "direction": "O",
+                "left": "127",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "toaccel_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "toaccel_tready",
                 "direction": "I"
               }
             }
@@ -2131,7 +2258,7 @@
             "direction": "I",
             "parameters": {
               "ASSOCIATED_BUSIF": {
-                "value": "mymodule_slv:m",
+                "value": "mymodule_slv:m:toaccel:fromaccel",
                 "value_src": "constant"
               },
               "ASSOCIATED_RESET": {
@@ -2170,6 +2297,11 @@
           },
           "fan_ctrl": {
             "direction": "O"
+          },
+          "accel_aes_key": {
+            "direction": "O",
+            "left": "127",
+            "right": "0"
           }
         },
         "addressing": {
@@ -2178,6 +2310,184 @@
               "range": "512T",
               "width": "49"
             }
+          }
+        }
+      },
+      "aes_accel_0": {
+        "vlnv": "xilinx.com:module_ref:aes_accel:1.0",
+        "xci_name": "bram_aes_accel_0_0",
+        "xci_path": "ip\\bram_aes_accel_0_0\\bram_aes_accel_0_0.xci",
+        "inst_hier_path": "aes_accel_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "aes_accel",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "ina": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "299997009",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "bram_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "ina_tdata",
+                "direction": "I",
+                "left": "127",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "ina_tvalid",
+                "direction": "I"
+              },
+              "TREADY": {
+                "physical_name": "ina_tready",
+                "direction": "O"
+              }
+            }
+          },
+          "outa": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "TDATA_NUM_BYTES": {
+                "value": "16",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "299997009",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "bram_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "outa_tdata",
+                "direction": "O",
+                "left": "127",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "outa_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "outa_tready",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "ina:outa",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "rst_n",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "299997009",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "bram_zynq_ultra_ps_e_0_0_pl_clk0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "key_in": {
+            "direction": "I",
+            "left": "127",
+            "right": "0"
           }
         }
       }
@@ -2189,6 +2499,18 @@
           "zynq_ultra_ps_e_0/S_AXI_HPC0_FPD"
         ]
       },
+      "accel_top_0_toaccel": {
+        "interface_ports": [
+          "aes_accel_0/ina",
+          "accel_top_0/toaccel"
+        ]
+      },
+      "aes_accel_0_outa": {
+        "interface_ports": [
+          "aes_accel_0/outa",
+          "accel_top_0/fromaccel"
+        ]
+      },
       "zynq_ultra_ps_e_0_M_AXI_HPM0_FPD": {
         "interface_ports": [
           "accel_top_0/mymodule_slv",
@@ -2197,6 +2519,12 @@
       }
     },
     "nets": {
+      "accel_top_0_accel_aes_key": {
+        "ports": [
+          "accel_top_0/accel_aes_key",
+          "aes_accel_0/key_in"
+        ]
+      },
       "accel_top_0_fan_ctrl": {
         "ports": [
           "accel_top_0/fan_ctrl",
@@ -2212,7 +2540,8 @@
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "accel_top_0/rst_n"
+          "accel_top_0/rst_n",
+          "aes_accel_0/rst_n"
         ]
       },
       "zynq_ultra_ps_e_0_pl_clk0": {
@@ -2221,7 +2550,8 @@
           "proc_sys_reset_0/slowest_sync_clk",
           "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
           "zynq_ultra_ps_e_0/saxihpc0_fpd_aclk",
-          "accel_top_0/clk"
+          "accel_top_0/clk",
+          "aes_accel_0/clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {

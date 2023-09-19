@@ -137,10 +137,17 @@ module bram_accel_top_0_1 (
   m_awqos,
   m_arqos,
   intr_out,
-  fan_ctrl
+  fan_ctrl,
+  accel_aes_key,
+  toaccel_tdata,
+  toaccel_tvalid,
+  toaccel_tready,
+  fromaccel_tdata,
+  fromaccel_tvalid,
+  fromaccel_tready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF mymodule_slv:m, ASSOCIATED_RESET rst_n, FREQ_HZ 299997009, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bram_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF mymodule_slv:m:toaccel:fromaccel, ASSOCIATED_RESET rst_n, FREQ_HZ 299997009, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN bram_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -310,6 +317,21 @@ output wire [3 : 0] m_arqos;
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 intr_out INTERRUPT" *)
 output wire intr_out;
 output wire fan_ctrl;
+output wire [127 : 0] accel_aes_key;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 toaccel TDATA" *)
+output wire [127 : 0] toaccel_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 toaccel TVALID" *)
+output wire toaccel_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME toaccel, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 299997009, PHASE 0.0, CLK_DOMAIN bram_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 toaccel TREADY" *)
+input wire toaccel_tready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 fromaccel TDATA" *)
+input wire [127 : 0] fromaccel_tdata;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 fromaccel TVALID" *)
+input wire fromaccel_tvalid;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME fromaccel, TDATA_NUM_BYTES 16, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 299997009, PHASE 0.0, CLK_DOMAIN bram_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 fromaccel TREADY" *)
+output wire fromaccel_tready;
 
   accel_top #(
     .M_UW(1),
@@ -401,6 +423,13 @@ output wire fan_ctrl;
     .m_awqos(m_awqos),
     .m_arqos(m_arqos),
     .intr_out(intr_out),
-    .fan_ctrl(fan_ctrl)
+    .fan_ctrl(fan_ctrl),
+    .accel_aes_key(accel_aes_key),
+    .toaccel_tdata(toaccel_tdata),
+    .toaccel_tvalid(toaccel_tvalid),
+    .toaccel_tready(toaccel_tready),
+    .fromaccel_tdata(fromaccel_tdata),
+    .fromaccel_tvalid(fromaccel_tvalid),
+    .fromaccel_tready(fromaccel_tready)
   );
 endmodule

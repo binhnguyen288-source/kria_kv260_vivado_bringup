@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Sep  8 13:48:27 2023
-# Process ID: 5405
-# Current directory: /home/binh/Documents/aes128/kria/kria.runs/impl_1
-# Command line: vivado -log bram_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bram_wrapper.tcl -notrace
-# Log file: /home/binh/Documents/aes128/kria/kria.runs/impl_1/bram_wrapper.vdi
-# Journal file: /home/binh/Documents/aes128/kria/kria.runs/impl_1/vivado.jou
-# Running On: binh-VirtualBox, OS: Linux, CPU Frequency: 2496.006 MHz, CPU Physical cores: 8, Host memory: 67419 MB
+# Start of session at: Tue Sep 19 14:57:51 2023
+# Process ID: 15184
+# Current directory: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/impl_1
+# Command line: vivado.exe -log bram_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bram_wrapper.tcl -notrace
+# Log file: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/impl_1/bram_wrapper.vdi
+# Journal file: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/impl_1\vivado.jou
+# Running On: DESKTOP-MHGG8FQ, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 136584 MB
 #-----------------------------------------------------------
 source bram_wrapper.tcl -notrace

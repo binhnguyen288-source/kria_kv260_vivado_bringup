@@ -15,4 +15,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bram_proc_s
 # IP: bd/bram/ip/bram_accel_top_0_1/bram_accel_top_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bram_accel_top_0_1 || ORIG_REF_NAME==bram_accel_top_0_1} -quiet] -quiet
 
-# XDC: /home/binh/Documents/aes128/kria/kria.gen/sources_1/bd/bram/bram_ooc.xdc
+# IP: bd/bram/ip/bram_aes_accel_0_0/bram_aes_accel_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bram_aes_accel_0_0 || ORIG_REF_NAME==bram_aes_accel_0_0} -quiet] -quiet
+
+# XDC: c:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.gen/sources_1/bd/bram/bram_ooc.xdc

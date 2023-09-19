@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep  8 13:47:27 2023" VIVADOVERSION="2023.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Sep 19 14:51:53 2023" VIVADOVERSION="2023.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kv260_som_som240_1_connector_kv260_carrier_som240_1_connector:part0:1.4" DEVICE="xck26" NAME="bram" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -443,6 +443,41 @@
             <CONNECTION INSTANCE="External_Ports" PORT="fan_ctrl_0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="127" NAME="accel_aes_key" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_accel_aes_key">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="key_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="toaccel_tdata" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="ina_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="toaccel_tvalid" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="ina_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="toaccel_tready" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="ina_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="fromaccel_tdata" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="outa_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="fromaccel_tvalid" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="outa_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="fromaccel_tready" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="outa_tready"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM0_FPD" DATAWIDTH="128" NAME="mymodule_slv" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -517,6 +552,46 @@
             <PORTMAP LOGICAL="RLAST" PHYSICAL="s_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="s_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="s_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="aes_accel_0_outa" NAME="fromaccel" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="299997009"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bram_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="fromaccel_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="fromaccel_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="fromaccel_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="accel_top_0_toaccel" NAME="toaccel" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="299997009"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bram_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="toaccel_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="toaccel_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="toaccel_tready"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="accel_top_0_m" DATAWIDTH="128" NAME="m" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
@@ -600,7 +675,104 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
+        <PERIPHERAL INSTANCE="aes_accel_0"/>
       </PERIPHERALS>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/aes_accel_0" HWVERSION="1.0" INSTANCE="aes_accel_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="aes_accel" VLNV="xilinx.com:module_ref:aes_accel:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="bram_aes_accel_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="299997009" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="key_in" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_accel_aes_key">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="accel_aes_key"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="127" NAME="ina_tdata" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="toaccel_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ina_tvalid" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="toaccel_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ina_tready" SIGIS="undef" SIGNAME="accel_top_0_toaccel_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="toaccel_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="127" NAME="outa_tdata" RIGHT="0" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="fromaccel_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="outa_tvalid" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="fromaccel_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="outa_tready" SIGIS="undef" SIGNAME="accel_top_0_fromaccel_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accel_top_0" PORT="fromaccel_tready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="accel_top_0_toaccel" NAME="ina" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="299997009"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bram_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="ina_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="ina_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="ina_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="aes_accel_0_outa" NAME="outa" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="16"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="299997009"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bram_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="outa_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="outa_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="outa_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="13" FULLNAME="/proc_sys_reset_0" HWVERSION="5.0" INSTANCE="proc_sys_reset_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
@@ -642,6 +814,7 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="accel_top_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2812,6 +2985,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihpc0_fpd_aclk"/>
             <CONNECTION INSTANCE="accel_top_0" PORT="clk"/>
+            <CONNECTION INSTANCE="aes_accel_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version      : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date              : Fri Sep  8 13:50:57 2023
-| Host              : binh-VirtualBox running 64-bit Ubuntu 22.04.3 LTS
+| Tool Version      : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date              : Tue Sep 19 15:02:54 2023
+| Host              : DESKTOP-MHGG8FQ running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file bram_wrapper_clock_utilization_routed.rpt
 | Design            : bram_wrapper
 | Device            : xck26-sfvc784
@@ -100,11 +100,11 @@ Table of Contents
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
 | Clock Region Name | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   | Used   | Avail   |
 +-------------------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+--------+---------+
-| X0Y0              |      1 |      24 |   1980 |   22080 |      0 |    6240 |      0 |       0 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X1Y0              |      1 |      24 |      2 |   17280 |      0 |    5280 |      2 |      24 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X0Y0              |      1 |      24 |   1492 |   22080 |      0 |    6240 |      0 |       0 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X1Y0              |      1 |      24 |     10 |   17280 |      0 |    5280 |      0 |      24 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
 | X2Y0              |      0 |      24 |      0 |   19200 |      0 |    2880 |      0 |      48 |      0 |      16 |      0 |      24 |      0 |       4 |      0 |       1 |
-| X0Y1              |      1 |      24 |   1351 |   22080 |      1 |    6240 |      0 |       0 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
-| X1Y1              |      1 |      24 |    430 |   17280 |      0 |    5280 |      6 |      24 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X0Y1              |      1 |      24 |   1841 |   22080 |      1 |    6240 |      0 |       0 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
+| X1Y1              |      1 |      24 |    420 |   17280 |      0 |    5280 |      8 |      24 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
 | X2Y1              |      0 |      24 |      0 |   19200 |      0 |    2880 |      0 |      48 |      0 |      16 |      0 |      24 |      0 |       4 |      0 |       1 |
 | X0Y2              |      0 |      24 |      0 |   22080 |      0 |    6240 |      0 |       0 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
 | X1Y2              |      0 |      24 |      0 |   17280 |      0 |    5280 |      0 |      24 |      0 |       0 |      0 |     144 |      0 |       0 |      0 |       0 |
@@ -173,8 +173,8 @@ All Modules
 +----+----------+------+----+-----------------------+
 | Y3 |    (D) 0 |    0 |  0 |                     - |
 | Y2 |        0 |    0 |  0 |                     - |
-| Y1 |     1353 |  433 |  0 |                     0 |
-| Y0 | (R) 1980 |    3 |  0 |                     0 |
+| Y1 |     1843 |  424 |  0 |                     0 |
+| Y0 | (R) 1492 |   10 |  0 |                     0 |
 +----+----------+------+----+-----------------------+
 
 
@@ -184,7 +184,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
-| g0        | 8     | BUFG_PS/O       | None       |        1980 |               0 | 1980 |           0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | 8     | BUFG_PS/O       | None       |        1492 |               0 | 1492 |           0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -197,7 +197,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
-| g0        | 8     | BUFG_PS/O       | None       |           3 |               0 |  2 |           0 |    1 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | 8     | BUFG_PS/O       | None       |          10 |               0 | 10 |           0 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -210,7 +210,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
-| g0        | 8     | BUFG_PS/O       | None       |        1353 |               0 | 1351 |           1 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | 8     | BUFG_PS/O       | None       |        1843 |               0 | 1841 |           1 |    0 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -223,7 +223,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | Memory LUTs | RAMB | URAM | DSP | GT | MMCM | PLL | Hard IP | Net                                   |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
-| g0        | 8     | BUFG_PS/O       | None       |         433 |               0 | 430 |           0 |    3 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
+| g0        | 8     | BUFG_PS/O       | None       |         424 |               0 | 420 |           0 |    4 |    0 |   0 |  0 |    0 |   0 |       0 | bram_i/zynq_ultra_ps_e_0/inst/pl_clk0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+-------------+------+------+-----+----+------+-----+---------+---------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads

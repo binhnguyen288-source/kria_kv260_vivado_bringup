@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="bram_accel_top_0_1_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1694155650">
-  <File Type="VDS-TIMINGSUMMARY" Name="bram_accel_top_0_1_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="bram_accel_top_0_1.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="bram_accel_top_0_1_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="bram_accel_top_0_1_utilization_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="bram_accel_top_0_1_timing_summary_synth.pb"/>
+<GenRun Id="bram_accel_top_0_1_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1695109915">
   <File Type="PA-TCL" Name="bram_accel_top_0_1.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="bram_accel_top_0_1_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="bram_accel_top_0_1_reports.tcl"/>
   <File Type="RDS-RDS" Name="bram_accel_top_0_1.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="bram_accel_top_0_1_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="bram_accel_top_0_1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="bram_accel_top_0_1_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="bram_accel_top_0_1.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="bram_accel_top_0_1_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="bram_accel_top_0_1_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bram_accel_top_0_1" RelGenDir="$PGENDIR/bram_accel_top_0_1">
     <File Path="$PSRCDIR/sources_1/bd/bram/ip/bram_accel_top_0_1/bram_accel_top_0_1.xci">
       <FileInfo>

@@ -1,20 +1,21 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Fri Sep  8 13:47:27 2023
-//Host        : binh-VirtualBox running 64-bit Ubuntu 22.04.3 LTS
+//Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+//Date        : Tue Sep 19 14:51:52 2023
+//Host        : DESKTOP-MHGG8FQ running 64-bit major release  (build 9200)
 //Command     : generate_target bram.bd
 //Design      : bram
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bram,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bram,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=3,numReposBlks=3,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "bram.hwdef" *) 
+(* CORE_GENERATION_INFO = "bram,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bram,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "bram.hwdef" *) 
 module bram
    (fan_ctrl_0);
   output fan_ctrl_0;
 
+  wire [127:0]accel_top_0_accel_aes_key;
   wire accel_top_0_fan_ctrl;
   wire accel_top_0_intr_out;
   wire [48:0]accel_top_0_m_ARADDR;
@@ -56,6 +57,12 @@ module bram
   wire accel_top_0_m_WREADY;
   wire [15:0]accel_top_0_m_WSTRB;
   wire accel_top_0_m_WVALID;
+  wire [127:0]accel_top_0_toaccel_TDATA;
+  wire accel_top_0_toaccel_TREADY;
+  wire accel_top_0_toaccel_TVALID;
+  wire [127:0]aes_accel_0_outa_TDATA;
+  wire aes_accel_0_outa_TREADY;
+  wire aes_accel_0_outa_TVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_ARBURST;
@@ -101,8 +108,12 @@ module bram
 
   assign fan_ctrl_0 = accel_top_0_fan_ctrl;
   bram_accel_top_0_1 accel_top_0
-       (.clk(zynq_ultra_ps_e_0_pl_clk0),
+       (.accel_aes_key(accel_top_0_accel_aes_key),
+        .clk(zynq_ultra_ps_e_0_pl_clk0),
         .fan_ctrl(accel_top_0_fan_ctrl),
+        .fromaccel_tdata(aes_accel_0_outa_TDATA),
+        .fromaccel_tready(aes_accel_0_outa_TREADY),
+        .fromaccel_tvalid(aes_accel_0_outa_TVALID),
         .intr_out(accel_top_0_intr_out),
         .m_araddr(accel_top_0_m_ARADDR),
         .m_arburst(accel_top_0_m_ARBURST),
@@ -182,7 +193,20 @@ module bram
         .s_wlast(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WLAST),
         .s_wready(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WREADY),
         .s_wstrb(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WSTRB),
-        .s_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WVALID));
+        .s_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WVALID),
+        .toaccel_tdata(accel_top_0_toaccel_TDATA),
+        .toaccel_tready(accel_top_0_toaccel_TREADY),
+        .toaccel_tvalid(accel_top_0_toaccel_TVALID));
+  bram_aes_accel_0_0 aes_accel_0
+       (.clk(zynq_ultra_ps_e_0_pl_clk0),
+        .ina_tdata(accel_top_0_toaccel_TDATA),
+        .ina_tready(accel_top_0_toaccel_TREADY),
+        .ina_tvalid(accel_top_0_toaccel_TVALID),
+        .key_in(accel_top_0_accel_aes_key),
+        .outa_tdata(aes_accel_0_outa_TDATA),
+        .outa_tready(aes_accel_0_outa_TREADY),
+        .outa_tvalid(aes_accel_0_outa_TVALID),
+        .rst_n(proc_sys_reset_0_peripheral_aresetn));
   bram_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

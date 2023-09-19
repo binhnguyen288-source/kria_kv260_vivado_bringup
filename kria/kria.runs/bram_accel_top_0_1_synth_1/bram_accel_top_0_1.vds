@@ -1,26 +1,456 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Sep  8 13:47:32 2023
-# Process ID: 5042
-# Current directory: /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1
-# Command line: vivado -log bram_accel_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_accel_top_0_1.tcl
-# Log file: /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1.vds
-# Journal file: /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/vivado.jou
-# Running On: binh-VirtualBox, OS: Linux, CPU Frequency: 2496.006 MHz, CPU Physical cores: 8, Host memory: 67419 MB
+# Start of session at: Tue Sep 19 14:51:58 2023
+# Process ID: 14472
+# Current directory: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_accel_top_0_1_synth_1
+# Command line: vivado.exe -log bram_accel_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_accel_top_0_1.tcl
+# Log file: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1.vds
+# Journal file: C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_accel_top_0_1_synth_1\vivado.jou
+# Running On: DESKTOP-MHGG8FQ, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 136584 MB
 #-----------------------------------------------------------
 source bram_accel_top_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 445.996 ; gain = 165.238
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/binh/ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/nguye/Documents/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bram_accel_top_0_1
-INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry ca0788ceb09a0fc4 to dir: /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/c/a/ca0788ceb09a0fc4/bram_accel_top_0_1_stub.v to /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1_stub.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/c/a/ca0788ceb09a0fc4/bram_accel_top_0_1.dcp to /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1.dcp.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/c/a/ca0788ceb09a0fc4/bram_accel_top_0_1_sim_netlist.v to /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1_sim_netlist.v.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/c/a/ca0788ceb09a0fc4/bram_accel_top_0_1_sim_netlist.vhdl to /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1_sim_netlist.vhdl.
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/c/a/ca0788ceb09a0fc4/bram_accel_top_0_1_stub.vhdl to /home/binh/Documents/aes128/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1_stub.vhdl.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP bram_accel_top_0_1, cache-ID = ca0788ceb09a0fc4.
-INFO: [Common 17-206] Exiting Vivado at Fri Sep  8 13:47:39 2023...
+Command: synth_design -top bram_accel_top_0_1 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6524
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 898.355 ; gain = 378.414
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bram_accel_top_0_1' [c:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.gen/sources_1/bd/bram/ip/bram_accel_top_0_1/synth/bram_accel_top_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'accel_top' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/accel_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axi4_regs' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/axi4_regs.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'axi4_regs' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/axi4_regs.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'buffer_fifo' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'buffer_fifo' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'accel_top' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/accel_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'bram_accel_top_0_1' (0#1) [c:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.gen/sources_1/bd/bram/ip/bram_accel_top_0_1/synth/bram_accel_top_0_1.v:53]
+WARNING: [Synth 8-7129] Port aruser[15] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[14] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[13] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[12] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[11] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[10] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[9] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[8] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[7] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[6] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[5] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[4] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arlock in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[15] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[14] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[13] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[12] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[11] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[10] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[9] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[8] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[7] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[6] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[5] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[4] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awuser[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awlock in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awcache[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awcache[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awcache[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awcache[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awprot[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awprot[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awprot[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awqos[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awqos[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awqos[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port awqos[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[5] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[4] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[3] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[2] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[1] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bid[0] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bresp[1] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_bresp[0] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[5] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[4] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[3] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[2] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[1] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rid[0] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rresp[1] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rresp[0] in module accel_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_rlast in module accel_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.363 ; gain = 483.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.363 ; gain = 483.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.363 ; gain = 483.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6794] RAM ("buffer_fifo:/mem_reg") will be automatically implemented using URAM. 
+INFO: [Synth 8-6794] RAM ("buffer_fifo:/mem_reg") will be automatically implemented using URAM. 
+INFO: [Synth 8-5780] Default cascade height of 1 will be used for URAM '"buffer_fifo:/mem_reg"'.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.363 ; gain = 483.422
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   49 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 3     
+	   2 Input   28 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 11    
+	   3 Input   10 Bit       Adders := 1     
+	   4 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
++---XORs : 
+	   2 Input     28 Bit         XORs := 2     
++---Registers : 
+	              128 Bit    Registers := 13    
+	               49 Bit    Registers := 2     
+	               28 Bit    Registers := 4     
+	               16 Bit    Registers := 2     
+	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
++---RAMs : 
+	              64K Bit	(512 X 128 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 7     
+	   2 Input   28 Bit        Muxes := 6     
+	   4 Input   28 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_aruser[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awuser[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[5] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[4] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[3] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awid[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[7] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[6] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[5] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[4] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[3] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlen[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awsize[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awsize[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awsize[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awburst[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awburst[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awlock driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awcache[3] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awcache[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awcache[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awcache[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awprot[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awprot[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awprot[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[15] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[14] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[13] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[12] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[11] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[10] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[9] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[8] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[7] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[6] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[5] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[4] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_wstrb[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_bready driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[5] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[4] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[3] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arid[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[7] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[6] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[5] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[4] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[3] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlen[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arsize[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arsize[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arsize[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arburst[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arburst[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arlock driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arcache[3] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arcache[2] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arcache[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arcache[0] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arprot[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arprot[1] driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arprot[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_rready driven by constant 1
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awqos[3] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awqos[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awqos[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_awqos[0] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arqos[3] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arqos[2] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arqos[1] driven by constant 0
+INFO: [Synth 8-3917] design bram_accel_top_0_1 has port m_arqos[0] driven by constant 0
+WARNING: [Synth 8-7129] Port aruser[15] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[14] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[13] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[12] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[11] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[10] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[9] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[8] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[7] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[6] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[5] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[4] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aruser[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arlock in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arcache[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[1] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arprot[0] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[3] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[2] in module axi4_regs is either unconnected or has no load
+WARNING: [Synth 8-7129] Port arqos[1] in module axi4_regs is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+RAM ("bram_accel_top_0_1/inst/tx_fifo/mem_reg") is too shallow (depth = 512) to use URAM. Choosing BRAM instead of URAM 
+RAM ("bram_accel_top_0_1/inst/rx_fifo/mem_reg") is too shallow (depth = 512) to use URAM. Choosing BRAM instead of URAM 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name        | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|bram_accel_top_0_1 | inst/tx_fifo/mem_reg | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      |                 | 
+|bram_accel_top_0_1 | inst/rx_fifo/mem_reg | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      |                 | 
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name        | RTL Object           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|bram_accel_top_0_1 | inst/tx_fifo/mem_reg | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      |                 | 
+|bram_accel_top_0_1 | inst/rx_fifo/mem_reg | 512 x 128(READ_FIRST)  | W |   | 512 x 128(WRITE_FIRST) |   | R | Port A and B     | 0      | 2      |                 | 
++-------------------+----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |    72|
+|2     |LUT1     |   114|
+|3     |LUT2     |   129|
+|4     |LUT3     |    89|
+|5     |LUT4     |    60|
+|6     |LUT5     |    51|
+|7     |LUT6     |   487|
+|8     |MUXF7    |    28|
+|9     |RAMB36E2 |     4|
+|10    |FDRE     |  1276|
+|11    |FDSE     |    12|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------+--------------+------+
+|      |Instance     |Module        |Cells |
++------+-------------+--------------+------+
+|1     |top          |              |  2322|
+|2     |  inst       |accel_top     |  2322|
+|3     |    rx_fifo  |buffer_fifo   |    76|
+|4     |    slv_regs |axi4_regs     |  1859|
+|5     |    tx_fifo  |buffer_fifo_0 |    92|
++------+-------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 147 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1803.809 ; gain = 1283.867
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1805.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1867.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9e06d93f
+INFO: [Common 17-83] Releasing license: Synthesis
+111 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1867.848 ; gain = 1347.906
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bram_accel_top_0_1, cache-ID = cd2fe4e4e08ca4f7
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_accel_top_0_1_synth_1/bram_accel_top_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bram_accel_top_0_1_utilization_synth.rpt -pb bram_accel_top_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 19 14:52:34 2023...

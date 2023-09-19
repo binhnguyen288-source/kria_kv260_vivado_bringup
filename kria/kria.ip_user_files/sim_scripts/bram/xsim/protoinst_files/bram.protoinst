@@ -3,6 +3,16 @@
 	"modules": {
 		"bram": {
 			"proto_instances": {
+				"/accel_top_0/fromaccel": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst_n"},
+						"TDATA": { "actual": "fromaccel_tdata"},
+						"TREADY": { "actual": "fromaccel_tready"},
+						"TVALID": { "actual": "fromaccel_tvalid"}
+					}
+				},
 				"/accel_top_0/m": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -93,6 +103,36 @@
 						"WREADY": { "actual": "s_wready"},
 						"WSTRB": { "actual": "s_wstrb"},
 						"WVALID": { "actual": "s_wvalid"}
+					}
+				},
+				"/accel_top_0/toaccel": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst_n"},
+						"TDATA": { "actual": "toaccel_tdata"},
+						"TREADY": { "actual": "toaccel_tready"},
+						"TVALID": { "actual": "toaccel_tvalid"}
+					}
+				},
+				"/aes_accel_0/ina": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst_n"},
+						"TDATA": { "actual": "ina_tdata"},
+						"TREADY": { "actual": "ina_tready"},
+						"TVALID": { "actual": "ina_tvalid"}
+					}
+				},
+				"/aes_accel_0/outa": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst_n"},
+						"TDATA": { "actual": "outa_tdata"},
+						"TREADY": { "actual": "outa_tready"},
+						"TVALID": { "actual": "outa_tvalid"}
 					}
 				},
 				"/zynq_ultra_ps_e_0/M_AXI_HPM0_FPD": {

@@ -12,7 +12,7 @@ module accel_top #(
     parameter S_IDW = 16
 ) (
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
-    (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF mymodule_slv:m, ASSOCIATED_RESET rst_n" *)
+    (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF mymodule_slv:m:toaccel:fromaccel, ASSOCIATED_RESET rst_n" *)
     input wire clk,
 
     (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst_n RST" *)
@@ -147,8 +147,18 @@ module accel_top #(
 
     (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 intr_out INTERRUPT" *)
     (* X_INTERFACE_PARAMETER = "SENSITIVITY LEVEL_HIGH" *)
-    output reg intr_out, //  (required)
-    output reg fan_ctrl
+    output reg intr_out,
+    output reg fan_ctrl,
+    
+    output wire[127:0] accel_aes_key,
+    
+    output wire[127:0] toaccel_tdata,
+    output wire        toaccel_tvalid,
+    input  wire        toaccel_tready,
+    
+    input wire[127:0] fromaccel_tdata,
+    input wire        fromaccel_tvalid,
+    output wire       fromaccel_tready
 );
     
     initial fan_ctrl = 1'b0;
@@ -275,17 +285,13 @@ module accel_top #(
     wire[127:0] aes_out;
     wire aes_req;
     
-    main_acc aes0(
-        .clk(clk),
-        .rst_n(rst_n),
-        .i_req(buf_data_reg_valid),
-        .data_in(buf_data_reg),
-        .key_in(aes_key),
-        .data_out(aes_out),
-        .i_gnt(aes_gnt),
-        .o_gnt(buf_data_gnt),
-        .o_req(aes_req)
-    );
+    assign accel_aes_key = aes_key;
+    assign toaccel_tdata = buf_data_reg;
+    assign toaccel_tvalid = buf_data_reg_valid;
+    assign buf_data_gnt = toaccel_tready;
+    assign aes_out = fromaccel_tdata;
+    assign aes_req = fromaccel_tvalid;
+    assign fromaccel_tready = aes_gnt;
 
     localparam TX_FIFODEPTH = 512;
     localparam TXPTR_WIDTH = $clog2(TX_FIFODEPTH);

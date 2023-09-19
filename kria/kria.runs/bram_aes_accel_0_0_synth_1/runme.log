@@ -1,0 +1,637 @@
+
+*** Running vivado
+    with args -log bram_aes_accel_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_aes_accel_0_0.tcl
+
+
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bram_aes_accel_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 446.688 ; gain = 165.816
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/nguye/Documents/ip_repo'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bram_aes_accel_0_0
+Command: synth_design -top bram_aes_accel_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2912
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 898.480 ; gain = 379.742
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bram_aes_accel_0_0' [c:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.gen/sources_1/bd/bram/ip/bram_aes_accel_0_0/synth/bram_aes_accel_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'aes_accel' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/aes_accel.v:24]
+INFO: [Synth 8-6157] synthesizing module 'aes_block' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized0' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized0' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized1' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized1' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized2' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized2' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized3' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized3' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized4' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized4' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized5' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized5' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized6' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized6' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized7' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized7' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6157] synthesizing module 'aes_block__parameterized8' [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_block__parameterized8' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/main_acc.sv:87]
+INFO: [Synth 8-6155] done synthesizing module 'aes_accel' (0#1) [C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.srcs/sources_1/new/aes_accel.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'bram_aes_accel_0_0' (0#1) [c:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.gen/sources_1/bd/bram/ip/bram_aes_accel_0_0/synth/bram_aes_accel_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1125.152 ; gain = 606.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1125.152 ; gain = 606.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1125.152 ; gain = 606.414
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 1870.965 ; gain = 1352.227
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 80    
+	   2 Input      8 Bit         XORs := 100   
+	   3 Input      8 Bit         XORs := 63    
+	   4 Input      8 Bit         XORs := 45    
+	   5 Input      8 Bit         XORs := 27    
+	   2 Input      1 Bit         XORs := 432   
++---Registers : 
+	               32 Bit    Registers := 80    
+	                1 Bit    Registers := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:03 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
+|aes_block   | sbox       | 256x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:59 ; elapsed = 00:02:04 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:05 ; elapsed = 00:02:10 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:05 ; elapsed = 00:02:10 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:05 ; elapsed = 00:02:10 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:05 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT2  |   727|
+|2     |LUT3  |   519|
+|3     |LUT4  |   632|
+|4     |LUT5  |   370|
+|5     |LUT6  |  7952|
+|6     |MUXF7 |  3200|
+|7     |MUXF8 |  1536|
+|8     |FDRE  |  2442|
++------+------+------+
+
+Report Instance Areas: 
++------+---------------------------+--------------------------+------+
+|      |Instance                   |Module                    |Cells |
++------+---------------------------+--------------------------+------+
+|1     |top                        |                          | 17378|
+|2     |  inst                     |aes_accel                 | 17378|
+|3     |    \genblk2[0].aesblock0  |aes_block                 |  2797|
+|4     |    \genblk2[1].aesblock0  |aes_block__parameterized0 |  1769|
+|5     |    \genblk2[2].aesblock0  |aes_block__parameterized1 |  1769|
+|6     |    \genblk2[3].aesblock0  |aes_block__parameterized2 |  1770|
+|7     |    \genblk2[4].aesblock0  |aes_block__parameterized3 |  1769|
+|8     |    \genblk2[5].aesblock0  |aes_block__parameterized4 |  1769|
+|9     |    \genblk2[6].aesblock0  |aes_block__parameterized5 |  1769|
+|10    |    \genblk2[7].aesblock0  |aes_block__parameterized6 |  1770|
+|11    |    \genblk2[8].aesblock0  |aes_block__parameterized7 |  1505|
+|12    |    \genblk2[9].aesblock0  |aes_block__parameterized8 |   563|
++------+---------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+Synthesis Optimization Complete : Time (s): cpu = 00:02:06 ; elapsed = 00:02:11 . Memory (MB): peak = 2042.859 ; gain = 1524.121
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.171 . Memory (MB): peak = 2047.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4736 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2067.711 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4e989035
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:15 . Memory (MB): peak = 2067.711 ; gain = 1548.973
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_aes_accel_0_0_synth_1/bram_aes_accel_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bram_aes_accel_0_0, cache-ID = 18a89b6279f2a367
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nguye/Documents/GitHub/kria_kv260_vivado_bringup/kria/kria.runs/bram_aes_accel_0_0_synth_1/bram_aes_accel_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bram_aes_accel_0_0_utilization_synth.rpt -pb bram_aes_accel_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 19 14:54:35 2023...
