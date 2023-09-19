@@ -1,0 +1,25 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.954436",
+   "Default View_TopLeft":"155,15",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_fan_ctrl_0 -pg 1 -lvl 3 -x 1210 -y 100 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 540 -y 80 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 540 -y -210 -defaultsOSRD
+preplace inst accel_top_0 -pg 1 -lvl 2 -x 1040 -y 80 -defaultsOSRD
+preplace netloc accel_top_0_fan_ctrl 1 2 1 N 100
+preplace netloc accel_top_0_intr_out 1 0 3 210 190 NJ 190 1180
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 1 870 -170n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 2 220 180 860
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 2 230 -10 850
+preplace netloc accel_top_0_m 1 0 3 230 170 NJ 170 1190
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 1 1 N 60
+levelinfo -pg 1 -30 540 1040 1210
+pagesize -pg 1 -db -bbox -sgen -30 -310 1350 980
+"
+}
+{
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

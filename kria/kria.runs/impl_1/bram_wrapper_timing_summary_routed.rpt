@@ -1,0 +1,1629 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date              : Fri Sep  8 13:50:54 2023
+| Host              : binh-VirtualBox running 64-bit Ubuntu 22.04.3 LTS
+| Command           : report_timing_summary -max_paths 10 -report_unconstrained -file bram_wrapper_timing_summary_routed.rpt -pb bram_wrapper_timing_summary_routed.pb -rpx bram_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design            : bram_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.127        0.000                      0                 8832        0.049        0.000                      0                 8832        0.166        0.000                       0                  3775  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock     Waveform(ns)         Period(ns)      Frequency(MHz)
+-----     ------------         ----------      --------------
+clk_pl_0  {0.000 1.666}        3.333           300.030         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_pl_0            0.127        0.000                      0                 8832        0.049        0.000                      0                 8832        0.166        0.000                       0                  3775  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                      clk_pl_0      
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_pl_0
+  To Clock:  clk_pl_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.127ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.049ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.166ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.127ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/m_awvalid_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.071ns  (logic 1.712ns (55.755%)  route 1.359ns (44.245%))
+  Logic Levels:           9  (CARRY8=5 LUT2=2 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.078ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.365ns = ( 5.698 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.642ns
+    Clock Pessimism Removal (CPR):    0.199ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.375ns (routing 1.299ns, distribution 1.076ns)
+  Clock Net Delay (Destination): 2.149ns (routing 1.186ns, distribution 0.963ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.375     2.642    bram_i/zynq_ultra_ps_e_0/inst/saxihpc0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_SAXIGP0WCLK_SAXIGP0AWREADY)
+                                                      0.356     2.998 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0AWREADY
+                         net (fo=13, routed)          0.451     3.449    bram_i/accel_top_0/inst/m_awready
+    SLICE_X3Y69          LUT3 (Prop_B6LUT_SLICEL_I1_O)
+                                                      0.058     3.507 r  bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry_i_11/O
+                         net (fo=1, routed)           0.013     3.520    bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry_i_11_n_0
+    SLICE_X3Y69          CARRY8 (Prop_CARRY8_SLICEL_S[1]_CO[7])
+                                                      0.261     3.781 r  bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry_i_2/CO[7]
+                         net (fo=1, routed)           0.030     3.811    bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry_i_2_n_0
+    SLICE_X3Y70          CARRY8 (Prop_CARRY8_SLICEL_CI_O[5])
+                                                      0.161     3.972 r  bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry__0_i_1/O[5]
+                         net (fo=3, routed)           0.377     4.348    bram_i/accel_top_0/inst/slv_regs/awaddr_ptr_nxt[12]
+    SLICE_X4Y76          LUT2 (Prop_D6LUT_SLICEM_I0_O)
+                                                      0.056     4.404 r  bram_i/accel_top_0/inst/slv_regs/tx_dfifo_bytescnt_nxt_carry__1_i_6/O
+                         net (fo=1, routed)           0.032     4.436    bram_i/accel_top_0/inst/slv_regs_n_233
+    SLICE_X4Y76          CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.232     4.668 r  bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry__1/CO[7]
+                         net (fo=1, routed)           0.030     4.698    bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry__1_n_0
+    SLICE_X4Y77          CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     4.804 r  bram_i/accel_top_0/inst/tx_dfifo_bytescnt_nxt_carry__2/O[1]
+                         net (fo=2, routed)           0.213     5.017    bram_i/accel_top_0/inst/slv_regs/tx_dfifo_bytescnt_nxt1_out[25]
+    SLICE_X3Y75          LUT4 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.150     5.167 r  bram_i/accel_top_0/inst/slv_regs/tx_dfifo_can_write_carry__0_i_11/O
+                         net (fo=1, routed)           0.015     5.182    bram_i/accel_top_0/inst/slv_regs_n_829
+    SLICE_X3Y75          CARRY8 (Prop_CARRY8_SLICEL_S[5]_CO[7])
+                                                      0.240     5.422 r  bram_i/accel_top_0/inst/tx_dfifo_can_write_carry__0/CO[7]
+                         net (fo=1, routed)           0.171     5.593    bram_i/accel_top_0/inst/tx_fifo/CO[0]
+    SLICE_X3Y76          LUT2 (Prop_A5LUT_SLICEL_I1_O)
+                                                      0.092     5.685 r  bram_i/accel_top_0/inst/tx_fifo/m_awvalid_i_1/O
+                         net (fo=1, routed)           0.027     5.712    bram_i/accel_top_0/inst/m_awvalid0
+    SLICE_X3Y76          FDRE                                         r  bram_i/accel_top_0/inst/m_awvalid_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.149     5.698    bram_i/accel_top_0/inst/clk
+    SLICE_X3Y76          FDRE                                         r  bram_i/accel_top_0/inst/m_awvalid_reg/C
+                         clock pessimism              0.199     5.897    
+                         clock uncertainty           -0.104     5.794    
+    SLICE_X3Y76          FDRE (Setup_AFF2_SLICEL_C_D)
+                                                      0.046     5.840    bram_i/accel_top_0/inst/m_awvalid_reg
+  -------------------------------------------------------------------
+                         required time                          5.840    
+                         arrival time                          -5.712    
+  -------------------------------------------------------------------
+                         slack                                  0.127    
+
+Slack (MET) :             0.143ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/m_arvalid_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.062ns  (logic 1.648ns (53.825%)  route 1.414ns (46.175%))
+  Logic Levels:           11  (CARRY8=4 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.068ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.375ns = ( 5.708 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.642ns
+    Clock Pessimism Removal (CPR):    0.199ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.375ns (routing 1.299ns, distribution 1.076ns)
+  Clock Net Delay (Destination): 2.159ns (routing 1.186ns, distribution 0.973ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.375     2.642    bram_i/zynq_ultra_ps_e_0/inst/saxihpc0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_SAXIGP0RCLK_SAXIGP0ARREADY)
+                                                      0.395     3.037 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0ARREADY
+                         net (fo=11, routed)          0.357     3.393    bram_i/accel_top_0/inst/m_arready
+    SLICE_X3Y65          LUT3 (Prop_B6LUT_SLICEL_I1_O)
+                                                      0.058     3.451 r  bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__0_i_11/O
+                         net (fo=1, routed)           0.013     3.464    bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__0_i_11_n_0
+    SLICE_X3Y65          CARRY8 (Prop_CARRY8_SLICEL_S[1]_CO[7])
+                                                      0.261     3.725 r  bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__0_i_10/CO[7]
+                         net (fo=1, routed)           0.030     3.755    bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__0_i_10_n_0
+    SLICE_X3Y66          CARRY8 (Prop_CARRY8_SLICEL_CI_O[1])
+                                                      0.106     3.861 r  bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__0_i_9/O[1]
+                         net (fo=2, routed)           0.369     4.231    bram_i/accel_top_0/inst/slv_regs/araddr_ptr_nxt[8]
+    SLICE_X6Y67          LUT2 (Prop_A6LUT_SLICEL_I1_O)
+                                                      0.058     4.289 r  bram_i/accel_top_0/inst/slv_regs/rx_sfifo_bytescnt_nxt_carry__1_i_8/O
+                         net (fo=1, routed)           0.014     4.303    bram_i/accel_top_0/inst/slv_regs_n_297
+    SLICE_X6Y67          CARRY8 (Prop_CARRY8_SLICEL_S[0]_CO[7])
+                                                      0.278     4.581 r  bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__1/CO[7]
+                         net (fo=1, routed)           0.030     4.611    bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__1_n_0
+    SLICE_X6Y68          CARRY8 (Prop_CARRY8_SLICEL_CI_O[5])
+                                                      0.161     4.772 r  bram_i/accel_top_0/inst/rx_sfifo_bytescnt_nxt_carry__2/O[5]
+                         net (fo=1, routed)           0.201     4.973    bram_i/accel_top_0/inst/slv_regs/rx_sfifo_bytescnt_nxt0_out[17]
+    SLICE_X6Y69          LUT4 (Prop_A6LUT_SLICEL_I1_O)
+                                                      0.082     5.055 r  bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_10/O
+                         net (fo=1, routed)           0.108     5.163    bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_10_n_0
+    SLICE_X7Y69          LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.056     5.219 r  bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_9/O
+                         net (fo=1, routed)           0.047     5.266    bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_9_n_0
+    SLICE_X7Y69          LUT6 (Prop_F6LUT_SLICEM_I5_O)
+                                                      0.056     5.322 r  bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_7/O
+                         net (fo=1, routed)           0.049     5.371    bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_7_n_0
+    SLICE_X7Y69          LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.057     5.428 r  bram_i/accel_top_0/inst/slv_regs/m_arvalid_i_5/O
+                         net (fo=1, routed)           0.101     5.529    bram_i/accel_top_0/inst/rx_fifo/rx_sfifo_can_read
+    SLICE_X7Y69          LUT6 (Prop_C6LUT_SLICEM_I5_O)
+                                                      0.080     5.609 r  bram_i/accel_top_0/inst/rx_fifo/m_arvalid_i_1/O
+                         net (fo=1, routed)           0.095     5.704    bram_i/accel_top_0/inst/m_arvalid0
+    SLICE_X7Y69          FDRE                                         r  bram_i/accel_top_0/inst/m_arvalid_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.159     5.708    bram_i/accel_top_0/inst/clk
+    SLICE_X7Y69          FDRE                                         r  bram_i/accel_top_0/inst/m_arvalid_reg/C
+                         clock pessimism              0.199     5.907    
+                         clock uncertainty           -0.104     5.804    
+    SLICE_X7Y69          FDRE (Setup_CFF_SLICEM_C_D)
+                                                      0.043     5.847    bram_i/accel_top_0/inst/m_arvalid_reg
+  -------------------------------------------------------------------
+                         required time                          5.847    
+                         arrival time                          -5.704    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+Slack (MET) :             0.144ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[81]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.234ns  (logic 1.011ns (31.260%)  route 2.223ns (68.740%))
+  Logic Levels:           4  (LUT2=1 LUT6=3)
+  Clock Path Skew:        0.105ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.509ns = ( 5.842 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.293ns (routing 1.186ns, distribution 1.107ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         0.949     5.329    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X23Y93         LUT6 (Prop_F6LUT_SLICEL_I4_O)
+                                                      0.150     5.479 r  bram_i/accel_top_0/inst/slv_regs/rdata[81]_i_2/O
+                         net (fo=1, routed)           0.070     5.549    bram_i/accel_top_0/inst/slv_regs/rdata[81]_i_2_n_0
+    SLICE_X23Y93         LUT6 (Prop_B6LUT_SLICEL_I0_O)
+                                                      0.224     5.773 r  bram_i/accel_top_0/inst/slv_regs/rdata[81]_i_1/O
+                         net (fo=1, routed)           0.067     5.840    bram_i/accel_top_0/inst/slv_regs/mem[81]
+    SLICE_X23Y93         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[81]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.293     5.842    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X23Y93         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[81]/C
+                         clock pessimism              0.202     6.044    
+                         clock uncertainty           -0.104     5.941    
+    SLICE_X23Y93         FDRE (Setup_BFF_SLICEL_C_D)
+                                                      0.044     5.985    bram_i/accel_top_0/inst/slv_regs/rdata_reg[81]
+  -------------------------------------------------------------------
+                         required time                          5.985    
+                         arrival time                          -5.840    
+  -------------------------------------------------------------------
+                         slack                                  0.144    
+
+Slack (MET) :             0.161ns  (required time - arrival time)
+  Source:                 bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[55]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.088ns  (logic 0.813ns (26.330%)  route 2.275ns (73.670%))
+  Logic Levels:           6  (CARRY8=1 LUT6=5)
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.519ns = ( 5.852 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.746ns
+    Clock Pessimism Removal (CPR):    0.201ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.479ns (routing 1.299ns, distribution 1.180ns)
+  Clock Net Delay (Destination): 2.303ns (routing 1.186ns, distribution 1.117ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.479     2.746    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X19Y81         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y81         FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     2.860 f  bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/Q
+                         net (fo=2, routed)           0.510     3.370    bram_i/accel_top_0/inst/slv_regs/arwrap_boundary[11]
+    SLICE_X21Y81         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.080     3.450 r  bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry_i_2/O
+                         net (fo=1, routed)           0.032     3.482    bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry_i_2_n_0
+    SLICE_X21Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[4])
+                                                      0.233     3.715 r  bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry/CO[4]
+                         net (fo=15, routed)          0.170     3.884    bram_i/accel_top_0/inst/slv_regs/araddr_nxt2__4
+    SLICE_X21Y82         LUT6 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.060     3.944 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_2/O
+                         net (fo=1, routed)           0.317     4.261    bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_2_n_0
+    SLICE_X21Y92         LUT6 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.058     4.319 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_1/O
+                         net (fo=257, routed)         1.024     5.343    bram_i/accel_top_0/inst/slv_regs/sel0[1]
+    SLICE_X23Y82         LUT6 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.187     5.530 r  bram_i/accel_top_0/inst/slv_regs/rdata[55]_i_2/O
+                         net (fo=1, routed)           0.153     5.683    bram_i/accel_top_0/inst/slv_regs/rdata[55]_i_2_n_0
+    SLICE_X23Y85         LUT6 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.081     5.764 r  bram_i/accel_top_0/inst/slv_regs/rdata[55]_i_1/O
+                         net (fo=1, routed)           0.069     5.833    bram_i/accel_top_0/inst/slv_regs/mem[55]
+    SLICE_X23Y85         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.303     5.852    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X23Y85         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[55]/C
+                         clock pessimism              0.201     6.054    
+                         clock uncertainty           -0.104     5.950    
+    SLICE_X23Y85         FDRE (Setup_FFF_SLICEL_C_D)
+                                                      0.044     5.994    bram_i/accel_top_0/inst/slv_regs/rdata_reg[55]
+  -------------------------------------------------------------------
+                         required time                          5.994    
+                         arrival time                          -5.833    
+  -------------------------------------------------------------------
+                         slack                                  0.161    
+
+Slack (MET) :             0.180ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[111]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.212ns  (logic 0.920ns (28.641%)  route 2.292ns (71.359%))
+  Logic Levels:           4  (LUT2=1 LUT6=3)
+  Clock Path Skew:        0.120ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.524ns = ( 5.857 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.308ns (routing 1.186ns, distribution 1.122ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         0.960     5.340    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X24Y84         LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.149     5.489 r  bram_i/accel_top_0/inst/slv_regs/rdata[111]_i_2/O
+                         net (fo=1, routed)           0.099     5.588    bram_i/accel_top_0/inst/slv_regs/rdata[111]_i_2_n_0
+    SLICE_X24Y85         LUT6 (Prop_D6LUT_SLICEM_I0_O)
+                                                      0.134     5.722 r  bram_i/accel_top_0/inst/slv_regs/rdata[111]_i_1/O
+                         net (fo=1, routed)           0.096     5.818    bram_i/accel_top_0/inst/slv_regs/mem[111]
+    SLICE_X24Y85         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[111]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.308     5.857    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X24Y85         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[111]/C
+                         clock pessimism              0.202     6.059    
+                         clock uncertainty           -0.104     5.955    
+    SLICE_X24Y85         FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.043     5.998    bram_i/accel_top_0/inst/slv_regs/rdata_reg[111]
+  -------------------------------------------------------------------
+                         required time                          5.998    
+                         arrival time                          -5.818    
+  -------------------------------------------------------------------
+                         slack                                  0.180    
+
+Slack (MET) :             0.196ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[73]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.212ns  (logic 0.774ns (24.097%)  route 2.438ns (75.903%))
+  Logic Levels:           4  (LUT2=1 LUT6=3)
+  Clock Path Skew:        0.135ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.539ns = ( 5.872 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.323ns (routing 1.186ns, distribution 1.137ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         1.104     5.484    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X25Y86         LUT6 (Prop_G6LUT_SLICEM_I4_O)
+                                                      0.057     5.541 r  bram_i/accel_top_0/inst/slv_regs/rdata[73]_i_2/O
+                         net (fo=1, routed)           0.102     5.643    bram_i/accel_top_0/inst/slv_regs/rdata[73]_i_2_n_0
+    SLICE_X25Y86         LUT6 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.080     5.723 r  bram_i/accel_top_0/inst/slv_regs/rdata[73]_i_1/O
+                         net (fo=1, routed)           0.095     5.818    bram_i/accel_top_0/inst/slv_regs/mem[73]
+    SLICE_X25Y86         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[73]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.323     5.872    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X25Y86         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[73]/C
+                         clock pessimism              0.202     6.074    
+                         clock uncertainty           -0.104     5.971    
+    SLICE_X25Y86         FDRE (Setup_CFF_SLICEM_C_D)
+                                                      0.043     6.014    bram_i/accel_top_0/inst/slv_regs/rdata_reg[73]
+  -------------------------------------------------------------------
+                         required time                          6.014    
+                         arrival time                          -5.818    
+  -------------------------------------------------------------------
+                         slack                                  0.196    
+
+Slack (MET) :             0.205ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[75]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.203ns  (logic 0.775ns (24.197%)  route 2.428ns (75.803%))
+  Logic Levels:           4  (LUT2=1 LUT6=3)
+  Clock Path Skew:        0.135ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.539ns = ( 5.872 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.323ns (routing 1.186ns, distribution 1.137ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         1.111     5.491    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X25Y86         LUT6 (Prop_F6LUT_SLICEM_I4_O)
+                                                      0.056     5.547 r  bram_i/accel_top_0/inst/slv_regs/rdata[75]_i_2/O
+                         net (fo=1, routed)           0.099     5.646    bram_i/accel_top_0/inst/slv_regs/rdata[75]_i_2_n_0
+    SLICE_X25Y86         LUT6 (Prop_B6LUT_SLICEM_I0_O)
+                                                      0.082     5.728 r  bram_i/accel_top_0/inst/slv_regs/rdata[75]_i_1/O
+                         net (fo=1, routed)           0.081     5.809    bram_i/accel_top_0/inst/slv_regs/mem[75]
+    SLICE_X25Y86         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[75]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.323     5.872    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X25Y86         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[75]/C
+                         clock pessimism              0.202     6.074    
+                         clock uncertainty           -0.104     5.971    
+    SLICE_X25Y86         FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.043     6.014    bram_i/accel_top_0/inst/slv_regs/rdata_reg[75]
+  -------------------------------------------------------------------
+                         required time                          6.014    
+                         arrival time                          -5.809    
+  -------------------------------------------------------------------
+                         slack                                  0.205    
+
+Slack (MET) :             0.207ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[83]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.174ns  (logic 0.862ns (27.162%)  route 2.312ns (72.838%))
+  Logic Levels:           3  (LUT2=1 LUT6=2)
+  Clock Path Skew:        0.108ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.512ns = ( 5.845 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.296ns (routing 1.186ns, distribution 1.110ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 f  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         1.093     5.474    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X24Y93         LUT6 (Prop_B6LUT_SLICEM_I5_O)
+                                                      0.225     5.699 r  bram_i/accel_top_0/inst/slv_regs/rdata[83]_i_1/O
+                         net (fo=1, routed)           0.081     5.780    bram_i/accel_top_0/inst/slv_regs/mem[83]
+    SLICE_X24Y93         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[83]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.296     5.845    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X24Y93         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[83]/C
+                         clock pessimism              0.202     6.047    
+                         clock uncertainty           -0.104     5.943    
+    SLICE_X24Y93         FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.043     5.986    bram_i/accel_top_0/inst/slv_regs/rdata_reg[83]
+  -------------------------------------------------------------------
+                         required time                          5.986    
+                         arrival time                          -5.780    
+  -------------------------------------------------------------------
+                         slack                                  0.207    
+
+Slack (MET) :             0.207ns  (required time - arrival time)
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+                            (rising edge-triggered cell PS8 clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[52]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.192ns  (logic 0.906ns (28.385%)  route 2.286ns (71.615%))
+  Logic Levels:           4  (LUT2=1 LUT6=3)
+  Clock Path Skew:        0.125ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.529ns = ( 5.862 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.606ns
+    Clock Pessimism Removal (CPR):    0.202ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.339ns (routing 1.299ns, distribution 1.040ns)
+  Clock Net Delay (Destination): 2.313ns (routing 1.186ns, distribution 1.127ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.339     2.606    bram_i/zynq_ultra_ps_e_0/inst/maxihpm0_fpd_aclk
+    PS8_X0Y0             PS8                                          r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8 (Prop_PS8_MAXIGP0ACLK_MAXIGP0ARVALID)
+                                                      0.445     3.051 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ARVALID
+                         net (fo=12, routed)          0.753     3.804    bram_i/accel_top_0/inst/slv_regs/s_arvalid
+    SLICE_X19Y92         LUT2 (Prop_F6LUT_SLICEL_I0_O)
+                                                      0.056     3.860 r  bram_i/accel_top_0/inst/slv_regs/rid[15]_i_1/O
+                         net (fo=59, routed)          0.384     4.244    bram_i/accel_top_0/inst/slv_regs/arready1
+    SLICE_X22Y85         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.136     4.380 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[4]_i_1/O
+                         net (fo=257, routed)         0.988     5.368    bram_i/accel_top_0/inst/slv_regs/sel0[0]
+    SLICE_X26Y87         LUT6 (Prop_H6LUT_SLICEL_I4_O)
+                                                      0.188     5.556 r  bram_i/accel_top_0/inst/slv_regs/rdata[52]_i_2/O
+                         net (fo=1, routed)           0.094     5.650    bram_i/accel_top_0/inst/slv_regs/rdata[52]_i_2_n_0
+    SLICE_X26Y87         LUT6 (Prop_D6LUT_SLICEL_I0_O)
+                                                      0.081     5.731 r  bram_i/accel_top_0/inst/slv_regs/rdata[52]_i_1/O
+                         net (fo=1, routed)           0.067     5.798    bram_i/accel_top_0/inst/slv_regs/mem[52]
+    SLICE_X26Y87         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[52]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.313     5.862    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X26Y87         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[52]/C
+                         clock pessimism              0.202     6.064    
+                         clock uncertainty           -0.104     5.961    
+    SLICE_X26Y87         FDRE (Setup_DFF_SLICEL_C_D)
+                                                      0.044     6.005    bram_i/accel_top_0/inst/slv_regs/rdata_reg[52]
+  -------------------------------------------------------------------
+                         required time                          6.005    
+                         arrival time                          -5.798    
+  -------------------------------------------------------------------
+                         slack                                  0.207    
+
+Slack (MET) :             0.207ns  (required time - arrival time)
+  Source:                 bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/rdata_reg[36]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            3.333ns  (clk_pl_0 rise@3.333ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        3.042ns  (logic 0.709ns (23.304%)  route 2.333ns (76.696%))
+  Logic Levels:           6  (CARRY8=1 LUT6=5)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.520ns = ( 5.853 - 3.333 ) 
+    Source Clock Delay      (SCD):    2.746ns
+    Clock Pessimism Removal (CPR):    0.201ns
+  Clock Uncertainty:      0.104ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Source):      2.479ns (routing 1.299ns, distribution 1.180ns)
+  Clock Net Delay (Destination): 2.304ns (routing 1.186ns, distribution 1.118ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.479     2.746    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X19Y81         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y81         FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.114     2.860 f  bram_i/accel_top_0/inst/slv_regs/arwrap_boundary_reg[11]/Q
+                         net (fo=2, routed)           0.510     3.370    bram_i/accel_top_0/inst/slv_regs/arwrap_boundary[11]
+    SLICE_X21Y81         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.080     3.450 r  bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry_i_2/O
+                         net (fo=1, routed)           0.032     3.482    bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry_i_2_n_0
+    SLICE_X21Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[4])
+                                                      0.233     3.715 r  bram_i/accel_top_0/inst/slv_regs/araddr_nxt2_carry/CO[4]
+                         net (fo=15, routed)          0.170     3.884    bram_i/accel_top_0/inst/slv_regs/araddr_nxt2__4
+    SLICE_X21Y82         LUT6 (Prop_H6LUT_SLICEM_I1_O)
+                                                      0.060     3.944 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_2/O
+                         net (fo=1, routed)           0.317     4.261    bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_2_n_0
+    SLICE_X21Y92         LUT6 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.058     4.319 r  bram_i/accel_top_0/inst/slv_regs/araddr_q[5]_i_1/O
+                         net (fo=257, routed)         1.024     5.343    bram_i/accel_top_0/inst/slv_regs/sel0[1]
+    SLICE_X23Y77         LUT6 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.083     5.426 r  bram_i/accel_top_0/inst/slv_regs/rdata[36]_i_2/O
+                         net (fo=1, routed)           0.212     5.638    bram_i/accel_top_0/inst/slv_regs/rdata[36]_i_2_n_0
+    SLICE_X23Y81         LUT6 (Prop_C6LUT_SLICEL_I0_O)
+                                                      0.081     5.719 r  bram_i/accel_top_0/inst/slv_regs/rdata[36]_i_1/O
+                         net (fo=1, routed)           0.069     5.788    bram_i/accel_top_0/inst/slv_regs/mem[36]
+    SLICE_X23Y81         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[36]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      3.333     3.333 r  
+    PS8_X0Y0             PS8                          0.000     3.333 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     3.514    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     3.549 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.304     5.853    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X23Y81         FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/rdata_reg[36]/C
+                         clock pessimism              0.201     6.055    
+                         clock uncertainty           -0.104     5.951    
+    SLICE_X23Y81         FDRE (Setup_CFF_SLICEL_C_D)
+                                                      0.044     5.995    bram_i/accel_top_0/inst/slv_regs/rdata_reg[36]
+  -------------------------------------------------------------------
+                         required time                          5.995    
+                         arrival time                          -5.788    
+  -------------------------------------------------------------------
+                         slack                                  0.207    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.049ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[3][2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.255ns  (logic 0.160ns (62.671%)  route 0.095ns (37.329%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.105ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.675ns
+    Source Clock Delay      (SCD):    2.375ns
+    Clock Pessimism Removal (CPR):    0.196ns
+  Clock Net Delay (Source):      2.159ns (routing 1.186ns, distribution 0.973ns)
+  Clock Net Delay (Destination): 2.408ns (routing 1.299ns, distribution 1.109ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.159     2.375    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/clk
+    SLICE_X17Y16         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[3][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y16         FDRE (Prop_HFF2_SLICEM_C_Q)
+                                                      0.113     2.488 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[3][2]/Q
+                         net (fo=34, routed)          0.083     2.571    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key[7]_106[122]
+    SLICE_X15Y16         LUT5 (Prop_A5LUT_SLICEL_I4_O)
+                                                      0.047     2.618 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q[3][2]_i_1__6/O
+                         net (fo=1, routed)           0.012     2.630    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][31]_9[2]
+    SLICE_X15Y16         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.408     2.675    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/clk
+    SLICE_X15Y16         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][2]/C
+                         clock pessimism             -0.196     2.480    
+    SLICE_X15Y16         FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.102     2.582    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][2]
+  -------------------------------------------------------------------
+                         required time                         -2.582    
+                         arrival time                           2.630    
+  -------------------------------------------------------------------
+                         slack                                  0.049    
+
+Slack (MET) :             0.058ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.278ns  (logic 0.161ns (57.821%)  route 0.117ns (42.179%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.119ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.689ns
+    Source Clock Delay      (SCD):    2.374ns
+    Clock Pessimism Removal (CPR):    0.196ns
+  Clock Net Delay (Source):      2.158ns (routing 1.186ns, distribution 0.972ns)
+  Clock Net Delay (Destination): 2.422ns (routing 1.299ns, distribution 1.123ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.158     2.374    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/clk
+    SLICE_X15Y55         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y55         FDRE (Prop_EFF2_SLICEL_C_Q)
+                                                      0.114     2.488 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/Q
+                         net (fo=5, routed)           0.105     2.594    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key[2]_21[61]
+    SLICE_X14Y54         LUT5 (Prop_B5LUT_SLICEL_I3_O)
+                                                      0.047     2.641 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q[3][5]_i_1__1/O
+                         net (fo=1, routed)           0.012     2.653    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][31]_10[5]
+    SLICE_X14Y54         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.422     2.689    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/clk
+    SLICE_X14Y54         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][5]/C
+                         clock pessimism             -0.196     2.493    
+    SLICE_X14Y54         FDRE (Hold_BFF2_SLICEL_C_D)
+                                                      0.102     2.595    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][5]
+  -------------------------------------------------------------------
+                         required time                         -2.595    
+                         arrival time                           2.653    
+  -------------------------------------------------------------------
+                         slack                                  0.058    
+
+Slack (MET) :             0.065ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/slv_regs/awwrap_boundary_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/slv_regs/awaddr_q_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.148ns (57.297%)  route 0.110ns (42.703%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.093ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.655ns
+    Source Clock Delay      (SCD):    2.363ns
+    Clock Pessimism Removal (CPR):    0.199ns
+  Clock Net Delay (Source):      2.147ns (routing 1.186ns, distribution 0.961ns)
+  Clock Net Delay (Destination): 2.388ns (routing 1.299ns, distribution 1.089ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.147     2.363    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X1Y96          FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/awwrap_boundary_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y96          FDRE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.115     2.478 r  bram_i/accel_top_0/inst/slv_regs/awwrap_boundary_reg[13]/Q
+                         net (fo=2, routed)           0.079     2.557    bram_i/accel_top_0/inst/slv_regs/awwrap_boundary[13]
+    SLICE_X0Y96          LUT6 (Prop_F6LUT_SLICEL_I5_O)
+                                                      0.033     2.590 r  bram_i/accel_top_0/inst/slv_regs/awaddr_q[13]_i_1/O
+                         net (fo=1, routed)           0.031     2.621    bram_i/accel_top_0/inst/slv_regs/p_1_in[13]
+    SLICE_X0Y96          FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/awaddr_q_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.388     2.655    bram_i/accel_top_0/inst/slv_regs/clk
+    SLICE_X0Y96          FDRE                                         r  bram_i/accel_top_0/inst/slv_regs/awaddr_q_reg[13]/C
+                         clock pessimism             -0.199     2.456    
+    SLICE_X0Y96          FDRE (Hold_FFF_SLICEL_C_D)
+                                                      0.101     2.557    bram_i/accel_top_0/inst/slv_regs/awaddr_q_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -2.557    
+                         arrival time                           2.621    
+  -------------------------------------------------------------------
+                         slack                                  0.065    
+
+Slack (MET) :             0.074ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/key_q_reg[3][8]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.250ns  (logic 0.159ns (63.533%)  route 0.091ns (36.467%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.074ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.689ns
+    Source Clock Delay      (SCD):    2.364ns
+    Clock Pessimism Removal (CPR):    0.251ns
+  Clock Net Delay (Source):      2.148ns (routing 1.186ns, distribution 0.962ns)
+  Clock Net Delay (Destination): 2.422ns (routing 1.299ns, distribution 1.123ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.148     2.364    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/clk
+    SLICE_X15Y52         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y52         FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.112     2.476 r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][8]/Q
+                         net (fo=3, routed)           0.079     2.555    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key[3]_38[80]
+    SLICE_X15Y50         LUT5 (Prop_A5LUT_SLICEL_I0_O)
+                                                      0.047     2.602 r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q[3][8]_i_1__2/O
+                         net (fo=1, routed)           0.012     2.614    bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/key_q_reg[3][31]_9[8]
+    SLICE_X15Y50         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/key_q_reg[3][8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.422     2.689    bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/clk
+    SLICE_X15Y50         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/key_q_reg[3][8]/C
+                         clock pessimism             -0.251     2.438    
+    SLICE_X15Y50         FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.102     2.540    bram_i/accel_top_0/inst/aes0/genblk2[3].aesblock0/key_q_reg[3][8]
+  -------------------------------------------------------------------
+                         required time                         -2.540    
+                         arrival time                           2.614    
+  -------------------------------------------------------------------
+                         slack                                  0.074    
+
+Slack (MET) :             0.076ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[0][26]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][26]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.287ns  (logic 0.159ns (55.348%)  route 0.128ns (44.652%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.109ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.671ns
+    Source Clock Delay      (SCD):    2.366ns
+    Clock Pessimism Removal (CPR):    0.196ns
+  Clock Net Delay (Source):      2.150ns (routing 1.186ns, distribution 0.964ns)
+  Clock Net Delay (Destination): 2.404ns (routing 1.299ns, distribution 1.105ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.150     2.366    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/clk
+    SLICE_X16Y20         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[0][26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y20         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.112     2.478 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[0][26]/Q
+                         net (fo=7, routed)           0.116     2.595    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key[7]_106[2]
+    SLICE_X14Y18         LUT5 (Prop_A5LUT_SLICEL_I1_O)
+                                                      0.047     2.642 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q[3][26]_i_1__5/O
+                         net (fo=1, routed)           0.012     2.654    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][31]_9[26]
+    SLICE_X14Y18         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.404     2.671    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/clk
+    SLICE_X14Y18         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][26]/C
+                         clock pessimism             -0.196     2.476    
+    SLICE_X14Y18         FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.102     2.578    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][26]
+  -------------------------------------------------------------------
+                         required time                         -2.578    
+                         arrival time                           2.654    
+  -------------------------------------------------------------------
+                         slack                                  0.076    
+
+Slack (MET) :             0.079ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.253ns  (logic 0.161ns (63.560%)  route 0.092ns (36.440%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.072ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.689ns
+    Source Clock Delay      (SCD):    2.365ns
+    Clock Pessimism Removal (CPR):    0.251ns
+  Clock Net Delay (Source):      2.149ns (routing 1.186ns, distribution 0.963ns)
+  Clock Net Delay (Destination): 2.422ns (routing 1.299ns, distribution 1.123ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.149     2.365    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/clk
+    SLICE_X14Y57         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y57         FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.114     2.479 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][6]/Q
+                         net (fo=5, routed)           0.080     2.559    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key[2]_21[62]
+    SLICE_X14Y55         LUT5 (Prop_A5LUT_SLICEL_I3_O)
+                                                      0.047     2.606 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q[3][6]_i_1__1/O
+                         net (fo=1, routed)           0.012     2.618    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][31]_10[6]
+    SLICE_X14Y55         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.422     2.689    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/clk
+    SLICE_X14Y55         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][6]/C
+                         clock pessimism             -0.251     2.437    
+    SLICE_X14Y55         FDRE (Hold_AFF2_SLICEL_C_D)
+                                                      0.102     2.539    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[3][6]
+  -------------------------------------------------------------------
+                         required time                         -2.539    
+                         arrival time                           2.618    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.082ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.301ns  (logic 0.167ns (55.399%)  route 0.134ns (44.601%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.119ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.689ns
+    Source Clock Delay      (SCD):    2.374ns
+    Clock Pessimism Removal (CPR):    0.196ns
+  Clock Net Delay (Source):      2.158ns (routing 1.186ns, distribution 0.972ns)
+  Clock Net Delay (Destination): 2.422ns (routing 1.299ns, distribution 1.123ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.158     2.374    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/clk
+    SLICE_X15Y55         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y55         FDRE (Prop_EFF2_SLICEL_C_Q)
+                                                      0.114     2.488 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q_reg[1][5]/Q
+                         net (fo=5, routed)           0.105     2.594    bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key[2]_21[61]
+    SLICE_X14Y54         LUT4 (Prop_B6LUT_SLICEL_I1_O)
+                                                      0.053     2.647 r  bram_i/accel_top_0/inst/aes0/genblk2[1].aesblock0/key_q[2][5]_i_1__1/O
+                         net (fo=1, routed)           0.029     2.676    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][31]_2[5]
+    SLICE_X14Y54         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.422     2.689    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/clk
+    SLICE_X14Y54         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][5]/C
+                         clock pessimism             -0.196     2.493    
+    SLICE_X14Y54         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.101     2.594    bram_i/accel_top_0/inst/aes0/genblk2[2].aesblock0/key_q_reg[2][5]
+  -------------------------------------------------------------------
+                         required time                         -2.594    
+                         arrival time                           2.676    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+Slack (MET) :             0.086ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/data_valid_out_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.277ns  (logic 0.168ns (60.670%)  route 0.109ns (39.330%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.090ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.717ns
+    Source Clock Delay      (SCD):    2.428ns
+    Clock Pessimism Removal (CPR):    0.199ns
+  Clock Net Delay (Source):      2.212ns (routing 1.186ns, distribution 1.026ns)
+  Clock Net Delay (Destination): 2.450ns (routing 1.299ns, distribution 1.151ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.212     2.428    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/clk
+    SLICE_X17Y70         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/data_valid_out_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X17Y70         FDRE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.115     2.543 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/data_valid_out_reg/Q
+                         net (fo=8, routed)           0.084     2.627    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/d_out_valid_6
+    SLICE_X16Y70         LUT4 (Prop_E6LUT_SLICEL_I3_O)
+                                                      0.053     2.680 r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_i_1__0/O
+                         net (fo=1, routed)           0.025     2.705    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_i_1__0_n_0
+    SLICE_X16Y70         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.450     2.717    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/clk
+    SLICE_X16Y70         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_reg/C
+                         clock pessimism             -0.199     2.519    
+    SLICE_X16Y70         FDRE (Hold_EFF_SLICEL_C_D)
+                                                      0.101     2.620    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/data_valid_out_reg
+  -------------------------------------------------------------------
+                         required time                         -2.620    
+                         arrival time                           2.705    
+  -------------------------------------------------------------------
+                         slack                                  0.086    
+
+Slack (MET) :             0.088ns  (arrival time - required time)
+  Source:                 bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[1][20]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][20]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.283ns  (logic 0.161ns (56.926%)  route 0.122ns (43.074%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.093ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.671ns
+    Source Clock Delay      (SCD):    2.383ns
+    Clock Pessimism Removal (CPR):    0.196ns
+  Clock Net Delay (Source):      2.167ns (routing 1.186ns, distribution 0.981ns)
+  Clock Net Delay (Destination): 2.404ns (routing 1.299ns, distribution 1.105ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.167     2.383    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/clk
+    SLICE_X15Y19         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[1][20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y19         FDRE (Prop_GFF2_SLICEL_C_Q)
+                                                      0.114     2.497 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q_reg[1][20]/Q
+                         net (fo=5, routed)           0.110     2.607    bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key[7]_106[44]
+    SLICE_X14Y18         LUT5 (Prop_B5LUT_SLICEL_I3_O)
+                                                      0.047     2.654 r  bram_i/accel_top_0/inst/aes0/genblk2[6].aesblock0/key_q[3][20]_i_1__6/O
+                         net (fo=1, routed)           0.012     2.666    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][31]_9[20]
+    SLICE_X14Y18         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.229     0.229    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.038     0.267 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.404     2.671    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/clk
+    SLICE_X14Y18         FDRE                                         r  bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][20]/C
+                         clock pessimism             -0.196     2.476    
+    SLICE_X14Y18         FDRE (Hold_BFF2_SLICEL_C_D)
+                                                      0.102     2.578    bram_i/accel_top_0/inst/aes0/genblk2[7].aesblock0/key_q_reg[3][20]
+  -------------------------------------------------------------------
+                         required time                         -2.578    
+                         arrival time                           2.666    
+  -------------------------------------------------------------------
+                         slack                                  0.088    
+
+Slack (MET) :             0.093ns  (arrival time - required time)
+  Source:                 bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_exr_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Destination:            bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             clk_pl_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pl_0 rise@0.000ns - clk_pl_0 rise@0.000ns)
+  Data Path Delay:        0.145ns  (logic 0.108ns (74.411%)  route 0.037ns (25.589%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.007ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.632ns
+    Source Clock Delay      (SCD):    1.468ns
+    Clock Pessimism Removal (CPR):    0.158ns
+  Clock Net Delay (Source):      1.317ns (routing 0.716ns, distribution 0.601ns)
+  Clock Net Delay (Destination): 1.445ns (routing 0.782ns, distribution 0.663ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.129     0.129    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.022     0.151 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        1.317     1.468    bram_i/proc_sys_reset_0/U0/EXT_LPF/slowest_sync_clk
+    SLICE_X2Y111         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_exr_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y111         FDRE (Prop_DFF_SLICEM_C_Q)
+                                                      0.083     1.551 r  bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_exr_reg/Q
+                         net (fo=2, routed)           0.028     1.579    bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_exr
+    SLICE_X2Y111         LUT3 (Prop_B5LUT_SLICEM_I0_O)
+                                                      0.025     1.604 r  bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int0/O
+                         net (fo=1, routed)           0.009     1.613    bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int0__0
+    SLICE_X2Y111         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.164     0.164    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.023     0.187 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        1.445     1.632    bram_i/proc_sys_reset_0/U0/EXT_LPF/slowest_sync_clk
+    SLICE_X2Y111         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int_reg/C
+                         clock pessimism             -0.158     1.475    
+    SLICE_X2Y111         FDRE (Hold_BFF2_SLICEM_C_D)
+                                                      0.045     1.520    bram_i/proc_sys_reset_0/U0/EXT_LPF/lpf_int_reg
+  -------------------------------------------------------------------
+                         required time                         -1.520    
+                         arrival time                           1.613    
+  -------------------------------------------------------------------
+                         slack                                  0.093    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_pl_0
+Waveform(ns):       { 0.000 1.666 }
+Period(ns):         3.333
+Sources:            { bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0] }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     PS8/MAXIGP0ACLK     n/a            3.000         3.333       0.333      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+Min Period        n/a     PS8/SAXIGP0RCLK     n/a            3.000         3.333       0.333      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+Min Period        n/a     PS8/SAXIGP0WCLK     n/a            3.000         3.333       0.333      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y15  bram_i/accel_top_0/inst/rx_fifo/mem_reg_1/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y15  bram_i/accel_top_0/inst/rx_fifo/mem_reg_1/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y11  bram_i/accel_top_0/inst/tx_fifo/mem_reg_0/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y11  bram_i/accel_top_0/inst/tx_fifo/mem_reg_0/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.960         3.333       1.373      RAMB36_X0Y12  bram_i/accel_top_0/inst/tx_fifo/mem_reg_1/CLKARDCLK
+Low Pulse Width   Slow    PS8/MAXIGP0ACLK     n/a            1.500         1.666       0.166      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+Low Pulse Width   Fast    PS8/MAXIGP0ACLK     n/a            1.500         1.666       0.166      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+Low Pulse Width   Slow    PS8/SAXIGP0RCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+Low Pulse Width   Fast    PS8/SAXIGP0RCLK     n/a            1.500         1.666       0.166      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+Low Pulse Width   Slow    PS8/SAXIGP0WCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+Low Pulse Width   Fast    PS8/SAXIGP0WCLK     n/a            1.500         1.666       0.166      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+Low Pulse Width   Slow    SRL16E/CLK          n/a            0.762         1.666       0.904      SLICE_X2Y111  bram_i/proc_sys_reset_0/U0/EXT_LPF/POR_SRL_I/CLK
+Low Pulse Width   Fast    SRL16E/CLK          n/a            0.762         1.666       0.904      SLICE_X2Y111  bram_i/proc_sys_reset_0/U0/EXT_LPF/POR_SRL_I/CLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.577         1.667       1.090      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.577         1.667       1.090      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKARDCLK
+High Pulse Width  Slow    PS8/MAXIGP0ACLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+High Pulse Width  Fast    PS8/MAXIGP0ACLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/MAXIGP0ACLK
+High Pulse Width  Slow    PS8/SAXIGP0RCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+High Pulse Width  Fast    PS8/SAXIGP0RCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0RCLK
+High Pulse Width  Slow    PS8/SAXIGP0WCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+High Pulse Width  Fast    PS8/SAXIGP0WCLK     n/a            1.500         1.667       0.167      PS8_X0Y0      bram_i/zynq_ultra_ps_e_0/inst/PS8_i/SAXIGP0WCLK
+High Pulse Width  Slow    SRL16E/CLK          n/a            0.762         1.667       0.905      SLICE_X2Y111  bram_i/proc_sys_reset_0/U0/EXT_LPF/POR_SRL_I/CLK
+High Pulse Width  Fast    SRL16E/CLK          n/a            0.762         1.666       0.904      SLICE_X2Y111  bram_i/proc_sys_reset_0/U0/EXT_LPF/POR_SRL_I/CLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.577         1.667       1.090      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKARDCLK
+High Pulse Width  Fast    RAMB36E2/CLKARDCLK  n/a            0.577         1.667       1.090      RAMB36_X0Y13  bram_i/accel_top_0/inst/rx_fifo/mem_reg_0/CLKARDCLK
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk_pl_0
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/EMIOGPIOO[95]
+                            (internal pin)
+  Destination:            bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        1.885ns  (logic 0.228ns (12.095%)  route 1.657ns (87.905%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Destination): 2.154ns (routing 1.186ns, distribution 0.968ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8                          0.000     0.000 f  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/EMIOGPIOO[95]
+                         net (fo=1, routed)           1.420     1.420    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X2Y117         LUT1 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.228     1.648 r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.237     1.885    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X2Y117         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.181     0.181    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.035     0.216 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        2.154     2.370    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X2Y117         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 bram_i/zynq_ultra_ps_e_0/inst/PS8_i/EMIOGPIOO[95]
+                            (internal pin)
+  Destination:            bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_pl_0  {rise@0.000ns fall@1.666ns period=3.333ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.735ns  (logic 0.106ns (14.422%)  route 0.629ns (85.578%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.100ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.195ns
+    Phase Error              (PE):    0.000ns
+  Clock Net Delay (Destination): 1.441ns (routing 0.782ns, distribution 0.659ns)
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS8_X0Y0             PS8                          0.000     0.000 f  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/EMIOGPIOO[95]
+                         net (fo=1, routed)           0.563     0.563    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X2Y117         LUT1 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.106     0.669 r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.066     0.735    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X2Y117         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pl_0 rise edge)
+                                                      0.000     0.000 r  
+    PS8_X0Y0             PS8                          0.000     0.000 r  bram_i/zynq_ultra_ps_e_0/inst/PS8_i/PLCLK[0]
+                         net (fo=1, routed)           0.164     0.164    bram_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0]
+    BUFG_PS_X0Y80        BUFG_PS (Prop_BUFG_PS_I_O)
+                                                      0.023     0.187 r  bram_i/zynq_ultra_ps_e_0/inst/buffer_pl_clk_0.PL_CLK_0_BUFG/O
+    X0Y0 (CLOCK_ROOT)    net (fo=3775, routed)        1.441     1.628    bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X2Y117         FDRE                                         r  bram_i/proc_sys_reset_0/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+&accel_top_0 {
+	compatible = "generic-uio";
+};
+
+&amba {
+	udmabuf0 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf0";
+		size = <0x10000000>;
+		dma-coherent;
+	};
+};

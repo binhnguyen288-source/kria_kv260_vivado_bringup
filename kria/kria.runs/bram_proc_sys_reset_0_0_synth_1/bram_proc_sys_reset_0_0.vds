@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Sep  8 13:47:32 2023
+# Process ID: 5040
+# Current directory: /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1
+# Command line: vivado -log bram_proc_sys_reset_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_proc_sys_reset_0_0.tcl
+# Log file: /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0.vds
+# Journal file: /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/vivado.jou
+# Running On: binh-VirtualBox, OS: Linux, CPU Frequency: 2496.006 MHz, CPU Physical cores: 8, Host memory: 67419 MB
+#-----------------------------------------------------------
+source bram_proc_sys_reset_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/binh/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bram_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 3d69038fdb7f5b84 to dir: /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/3/d/3d69038fdb7f5b84/bram_proc_sys_reset_0_0.dcp to /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/3/d/3d69038fdb7f5b84/bram_proc_sys_reset_0_0_sim_netlist.vhdl to /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/3/d/3d69038fdb7f5b84/bram_proc_sys_reset_0_0_stub.vhdl to /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/3/d/3d69038fdb7f5b84/bram_proc_sys_reset_0_0_stub.v to /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/binh/Documents/aes128/kria/kria.cache/ip/2023.1/3/d/3d69038fdb7f5b84/bram_proc_sys_reset_0_0_sim_netlist.v to /home/binh/Documents/aes128/kria/kria.runs/bram_proc_sys_reset_0_0_synth_1/bram_proc_sys_reset_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP bram_proc_sys_reset_0_0, cache-ID = 3d69038fdb7f5b84.
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  8 13:47:39 2023...
